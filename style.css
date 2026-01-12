@@ -1,0 +1,91 @@
+
+
+.header {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    margin-top: -70px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+    margin-right: 100px;
+    gap: 20px;
+}
+
+input[type="text"] {
+    border-bottom: 0.5px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    font-style: italic;
+    padding-top: 20px;
+
+}
+
+input:focus {
+    outline: none;
+    
+}
+
+input {
+    text-align: center;
+}
+
+.cart-icon {
+    margin-top: 10px;
+    cursor: pointer
+}
+
+.main-content-image {
+    padding-top: 90px;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.main-content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.shop-button {
+    border: none;
+    border-radius: 6px;
+    font-size: 23px;
+    font-weight: 100;
+    font-family: system-ui;
+}
+
+.shop-button:hover {
+    text-decoration-line: underline;
+}
+
+.product-grid {
+    display: flex;
+    flex-direction: row;
+
+}
