@@ -1,0 +1,140 @@
+
+body {
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.product-card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.product-card {
+    position: relative;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 9px;
+    width: 220px;
+    height: 350px;
+}
+
+.product-grid {
+    padding: 70px 70px 0px 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.product-image-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-color: rgba(61, 61, 61, 0.03);
+}
+
+.wish-list-button {
+    background:transparent;
+    border:none;
+    height: 74%;
+    width: 87%;
+    padding-top: 6px;
+    margin-top: 4px;
+}
+
+.wishlist-button-small img{
+    width:17px;
+    height: 17px;
+}
+
+.wishlist-button-small{
+    background: transparent;
+    border: none;
+    position: absolute;
+    bottom: 95%;
+    left: 87%;
+}
+
+.wishlist-button-small:hover img {
+    content: url("https://img.icons8.com/material/24/4D4D4D/like--v1.png");
+}
+
+.product-info {
+    padding: 10px 15px 0px 15px;
+}
+
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 17px;
+    left: 15%;
+    border: none;
+    border-radius: 17px;
+    background-color: rgb(24, 36, 111);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    width: 70%;
+    transition: opacity 0.3s ease;
+}
+
+
+.add-to-cart-btn {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.add-to-cart-container button:hover {
+    opacity: 0.7;
+    
+}
+
+.added-to-cart {
+    position: absolute;
+    display: none;
+    text-align:center; 
+    font-size: 14px;
+    left:24%;
+    top:85%;
+}
+
+.empty-cart {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 100;
+    margin: 0 0 3rem 0;
+}
+
+.no-favorites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 30rem;
+}
+
+.no-favorites-container {
+    height: 100vh;
+}
+
+#back-arrow {
+    color: rgb(24, 36, 111);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    padding: 12px 10px 12px 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(24, 36, 111);
+    width: 30%;
+    color: rgb(24, 36, 111);
+    text-align: center;
+}

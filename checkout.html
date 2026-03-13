@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
+    <title>Cart - Shoply</title>
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
-    <div class = "product-section"></div>
+    <div class = "checkout-layout">
+        <div class = left-section> 
+            <div class = "cart-info"> </div>
+            <hr class="line">
+            <div class = "product-section">
+            </div> 
+        </div>
+        <div class = "order-summary"> 
+            <h1> Order Summary</h1>
+            <hr>
+            <div class = "shipping-promo"> 
+                <div class ="shipping">
+                   <p> Shipping</p> 
+                   <select id = "shipping-options">
+                        <option value="standard">Standard Delivery - $5.00</option>
+                        <option value="express">Express Delivery - $10.00</option>
+                    </select>
+                </div>
+                <div class="promo-code">
+                    <p> Promo Code</p>
+                    <input type ="text" id="input" placeholder="Enter your code">
+                    <div class="check-mark"></div>
+                    <div class="promo-code-info"></div>
+                    <button id="apply" onclick ="promoCodeApplied()"> APPLY</button>
+                    <hr>
+                    <div class="total-cost"></div>
+                    <button id="checkout"> Checkout</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 <script src = "checkout.js"></script>
 </body>    
 </html>
