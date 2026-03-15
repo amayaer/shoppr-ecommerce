@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoply</title>
+    <title>Shoppr</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hgc5hqd.css">
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class = "header"> 
         <div class = "logo"> 
-            <p>Shoply</p> 
+            <a href="index.html">
+                <img src="logo-pic.png" width="130" height="45">
+            </a>
         </div>
         <div class = "right-section">
             <div class = "search-bar"> 
@@ -32,14 +40,15 @@
     <div class = "main-content-image">
         <div class = "main-text">
             <p> Browse gadgets & tech</p>
-            <button>Shop Now</button>
+            <p class="top-deals"> Top deals on the latest tech</p>
+            <button onclick="shopNow()">Shop Now</button>
         </div>
-        <img src="assets/product-images/product14.png" width="270" height="300">
+        <img src="assets/header-image.png">
     </div>
 </div class = "product-section">
     <div class ="category-buttons-container">
-        <button class ="category-buttons" id="All" style="color:white; background-color: rgb(24, 36, 111);">All</button>
-        <button class="category-buttons" id="Gadegets">Gadgets</button>
+        <button class ="category-buttons" id="All" style = "border-color:#001F3F; border-width: 1.4px;">All</button>
+        <button class="category-buttons" id="Gadgets">Gadgets</button>
         <button class="category-buttons" id="Clothing">Clothing</button>
         <button class="category-buttons" id="Jewelry">Jewelry</button>
     </div>

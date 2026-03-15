@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order Confirmed - Shoppr</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> 
+        body {
+            font-family: sans-serif;
+        }
+        
+        .order-confirmed {
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            min-height: 100vh
+
+        }
+
+        .order-confirmed h1 {
+            font-size: 22px;
+            font-weight: 100;
+        }
+
+        .order-confirmed p {
+            font-size: 14px;
+            font-weight: 100;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: transparent;
+            padding: 12px 10px 12px 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(24, 36, 111);
+            width: 25%;
+            color: rgb(24, 36, 111);
+            font-size: 12px;
+            margin-top: 1rem;
+        }
+
+        #back-arrow {
+            color: rgb(24, 36, 111);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="order-confirmed">
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your purchase.</p>
+        <a href="index.html" id ="back-arrow"> &larr; Continue Shopping</a>
+    </div>
+
+    <script> 
+        localStorage.removeItem('cart');
+    </script>
+</body>
+</html>

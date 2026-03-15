@@ -3,10 +3,9 @@ body {
     font-family: system-ui;
 }
 
-
 .header {
     background-color: white;
-    height: 70px;
+    height: 65px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,20 +14,26 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
+    padding-bottom: 18px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);                     
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo {
-    font-size: 23px;
-    margin: 7px 0 0 40px;
-    text-transform: uppercase;
+    margin:25px 0 0 40px;
 }
 
 .right-section {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    margin-right: 100px;
     gap: 5px;
+    margin-right: 2rem;
+    justify-content: space-around;
 }
 
 input[type="text"] {
@@ -50,8 +55,8 @@ input:focus {
     background-color: transparent;
     border:none;
     position: absolute;
-    left: 82%;
     padding-top: 10px;
+    transform: translateX(270%);
 }
 
 .wish-list-button {
@@ -59,7 +64,7 @@ input:focus {
     border:none;
     height: 74%;
     width: 87%;
-    padding-top: 6px;
+    padding-top: 3px;
     margin-top: 4px;
 }
 
@@ -106,47 +111,69 @@ input {
     padding: 2px;
     width: 22%;
     height: 27%;
-    bottom: 22px;
+    bottom: 19px;
     left: 26px;
     font-size: 9px;
 }
 
 .main-content-image {
-    position: relative;
-    height: 230px;
-    width: 95%;
-    display: block;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 244px;
+    width: 90%;
     margin: 6rem auto 0 auto;
-    max-width: 1440px;
-    background: linear-gradient(75deg, rgba(6, 85, 255, 0.953), rgb(1, 238, 238)); 
+    position: relative;
+    background-color: rgb(45, 51, 107);
     border-radius: 9px;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+
+
+.top-deals {
+    font-size: 14px;
+    color: rgb(239, 168, 166);
+    font-weight: 500;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .main-content-image img {
-    position: relative;
-    left: 65%;
-    bottom: 12%;
+    flex-shrink: 0;   
+    height: 240px;
+    width: auto;
+    object-fit: contain;
 }
 
 .main-content-image button {
-    border:none;
+    border: none;
     border-radius: 5px;
-    color: white;
-    background-color: rgb(24, 36, 111);
-    padding: 9px;
+    color: rgb(8, 11, 35);
+    background-color: white;
+    padding: 13px 9px 13px 9px;
     font-size: 11px;
-    width: 40%;
+    width: 24%;
+    font-weight: 700;
+    max-width: 170px;
+    margin-top: 15px;
+}
+
+.main-content-image button:hover {
+    opacity: 0.8;
 }
 
 .main-text {
-    position: absolute;
-    top: 50%;
-    left: 17%;
-    transform: translate(-50%, -50%);
-    font-size: 27px;
+    flex:1;
+    max-width: 50%;
     cursor: pointer;
     color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
 }
+
+
 .category-buttons-container {
     margin: 1rem 0 0 0.2rem;
 }
@@ -155,15 +182,18 @@ input {
     border-radius: 19px;
     padding: 10px;
     width: 9%;
-    font-size: 12px;
+    min-width: 75px;
+    max-width: 160px;
+    font-size: 11px;
     font-weight: 600;
     border: 1px solid rgb(208, 207, 207);
     background-color: transparent;
+    color: #001F3F;
 }
 
 .category-buttons-container button:hover {
-    color: white;
-    background-color: rgb(24, 36, 111);
+    opacity: 0.8;
+    background-color: rgba(247, 247, 247, 0.905);
     
 }
 
@@ -186,9 +216,9 @@ input {
 }
 
 .product-grid {
-    padding: 70px 40px 0px 40px;
+    padding: 50px 40px 0px 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px;
     justify-items: center;
 }
@@ -214,7 +244,7 @@ input {
 }
 
 .wishlist-button-small:hover img {
-    content: url("https://img.icons8.com/material/24/4D4D4D/like--v1.png");
+    content: url("https://img.icons8.com/material/24/EFA8A6/like--v1.png");
 }
 
 .product-info {
@@ -227,7 +257,7 @@ input {
     left: 15%;
     border: none;
     border-radius: 17px;
-    background-color: rgb(24, 36, 111);
+    background-color: rgb(45, 51, 107);
     color: white;
     padding: 10px 20px 10px 20px;
     cursor: pointer;
@@ -252,4 +282,138 @@ input {
     font-size: 14px;
     left:24%;
     top:85%;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 23px;
+        margin: 7px 0 0 20px;
+        text-transform: uppercase;
+    }
+
+    .input {
+        font-size: 13px;
+        width: 12rem;
+        margin-left:15px;
+    }
+
+    .search-icon {
+        transform: translateX(118%);
+    }
+
+    .main-content-image button {
+        width: 50%;
+    }
+
+    .main-content-image img {  
+        height: 100px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .main-content-image {
+        height: 170px;
+        max-width: 500px;
+    }
+
+    .main-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width:477px) and (max-width: 699px) {
+    .main-content-image {
+        height: 200px;
+    }
+
+    .main-text {
+        font-size: 1.5rem;
+    }
+
+    .top-deals {
+        font-size: 0.9rem;
+    }
+
+    .main-content-image button {
+        font-size: 0.7rem;
+        width: 40%;
+    }
+
+    .main-content-image img {  
+        height: 140px;
+    }
+}
+
+@media (min-width: 1420px) {
+    .main-content-image {
+        height: 300px;
+    }
+
+    .main-text {
+        font-size: 2.5rem;
+    }
+
+    .top-deals {
+        font-size: 1.6rem;
+    }
+
+    .main-content-image button {
+        font-size: 1rem;
+    }
+
+    .main-content-image img {  
+        height: 300px;
+    }
+}
+
+@media (max-width: 476px) {
+    .main-content-image {
+        height: 150px;
+        width: 85%;
+    }
+
+    .main-text {
+        font-size: 1rem;
+        padding-right: 0.8rem;
+    }
+
+    .top-deals {
+        font-size: 0.8rem;
+    }
+
+    .main-content-image button {
+        font-size: 0.6rem;
+    }
+
+    .main-content-image img {  
+        height: 110px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .main-content-image {
+        height: 150px;
+        width: 80%;
+    }
+
+    .main-text {
+        font-size: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .top-deals {
+        font-size: 0.6rem;
+    }
+
+    .main-content-image button {
+        font-size: 0.4rem;
+        margin-top: 0.3rem;
+    }
+
+    .main-content-image img {  
+        height: 95px;
+    }
+
 }

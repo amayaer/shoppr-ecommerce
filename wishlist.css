@@ -1,7 +1,125 @@
-
 body {
-    overflow: hidden;
     font-family: sans-serif;
+}
+
+.header {
+    background-color: white;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-bottom: 18px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);  
+}
+.top-text {
+    margin: 7rem 0 0 5rem;
+    font-size: 24px;
+    font-weight: 100;
+    font-family:  "articulat-cf", sans-serif;
+    color: rgb(53, 53, 53);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin: 25px 0 0 40px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 5px;
+    margin-right: 2rem;
+    justify-content: space-around;
+}
+
+input[type="text"] {
+    border: none;
+    background-color: rgb(248, 247, 247);
+    padding: 12px 0px 12px 20px;
+    border-radius: 15px;
+    margin-top: 3px;
+    position: relative;
+}
+
+input:focus {
+    outline: none;
+    
+}
+
+
+.search-icon {
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    padding-top: 10px;
+    transform: translateX(270%);
+}
+
+.wish-list-button {
+    background:transparent;
+    border:none;
+    height: 74%;
+    width: 87%;
+    padding-top: 3px;
+    margin-top: 4px;
+
+}
+
+.wish-list-button:hover {
+   background-color: rgb(248, 247, 247);
+   border-radius: 50%;
+}
+
+input {
+    padding-left: 20px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    padding-bottom: 7px;
+}
+
+.cart-button {
+    position:relative;
+    background:transparent;
+    border:none;
+    height: 77%;
+    width: 40%;
+    padding-top: 6px;
+    padding-right: 9px;
+    margin-top: 4px;
+}
+.cart-icon img {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.cart-button:hover {
+    background-color: rgb(248, 247, 247);
+    border-radius: 50%;
+}
+
+.cart-icon-bubble {
+    position: absolute;
+    background-color: rgb(218, 26, 26);
+    border-radius: 50%;
+    color:white;
+    padding: 2px;
+    width: 22%;
+    height: 27%;
+    bottom: 19px;
+    left: 26px;
+    font-size: 9px;
 }
 
 .product-card img {
@@ -23,10 +141,11 @@ body {
 }
 
 .product-grid {
-    padding: 70px 70px 0px 70px;
+    padding: 10px 70px 0px 70px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 3rem;
+    margin-top: 2rem;
 }
 
 .product-image-container {
@@ -56,10 +175,6 @@ body {
     position: absolute;
     bottom: 95%;
     left: 87%;
-}
-
-.wishlist-button-small:hover img {
-    content: url("https://img.icons8.com/material/24/4D4D4D/like--v1.png");
 }
 
 .product-info {
@@ -115,26 +230,20 @@ body {
     align-items:center;
     height: 100%;
     width: 100%;
-    padding-bottom: 30rem;
 }
 
 .no-favorites-container {
     height: 100vh;
 }
 
-#back-arrow {
-    color: rgb(24, 36, 111);
-    font-size: 12px;
-    font-weight: 500;
-}
-
-a {
+.no-favorites-container a {
     text-decoration: none;
     background-color: transparent;
     padding: 12px 10px 12px 10px;
     border-radius: 8px;
     border: 1px solid rgb(24, 36, 111);
-    width: 30%;
+    width: 20%;
     color: rgb(24, 36, 111);
     text-align: center;
+    font-size: 12px;
 }

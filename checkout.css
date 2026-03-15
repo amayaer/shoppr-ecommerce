@@ -1,22 +1,134 @@
 
 body,html {
     background-color: white;
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+}
+.header {
+    background-color: white;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-bottom: 18px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);  
 }
 
+.header-link {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.logo {
+    margin: 25px 0 0 40px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 5px;
+    margin-right: 2rem;
+    justify-content: space-around;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    background-color: rgb(248, 247, 247);
+    padding: 12px 0px 12px 20px;
+    border-radius: 15px;
+    margin-top: 3px;
+    position: relative;
+}
+
+input:focus {
+    outline: none;
+    
+}
+
+.search-icon {
+    background-color: transparent;
+    border:none;
+    position: absolute;
+    padding-top: 10px;
+    transform: translateX(270%);
+}
+
+.wish-list-button {
+    background:transparent;
+    border:none;
+    height: 74%;
+    width: 87%;
+    padding-top: 3px;
+    margin-top: 4px;
+}
+
+.wish-list-button:hover {
+   background-color: rgb(248, 247, 247);
+   border-radius: 50%;
+}
+
+input {
+    padding-left: 20px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    padding-bottom: 7px;
+}
+
+.cart-button {
+    position:relative;
+    background:transparent;
+    border:none;
+    height: 77%;
+    width: 40%;
+    padding-top: 6px;
+    padding-right: 9px;
+    margin-top: 4px;
+}
+.cart-icon img {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.cart-button:hover {
+    background-color: rgb(248, 247, 247);
+    border-radius: 50%;
+}
+
+.cart-icon-bubble {
+    position: absolute;
+    background-color: rgb(218, 26, 26);
+    border-radius: 50%;
+    color:white;
+    padding: 2px;
+    width: 22%;
+    height: 27%;
+    bottom: 19px;
+    left: 26px;
+    font-size: 9px;
+}
 .checkout-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     min-height: 100vh;
     align-items: start;
+    margin-top: 3rem;
 }
 
 .order-summary {
     position: sticky;
     top: 0;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(250, 250, 250);
     min-height: 100vh;
     box-sizing: border-box;
     width: 100%;
@@ -24,28 +136,38 @@ body,html {
 
 .order-summary h1 {
     margin-top: 0;
-    font-size:25px;
+    font-size:23px;
     font-weight: 300;
     padding: 3.5rem 0 0 3.4rem;
     text-align:left;
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(48, 48, 48);
 }
 
 .cart-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 17rem;
-    padding: 2rem 0 0 5em;
+    gap: 19rem;
+    padding: 2.5rem 0 0 5em;
 }
 .cart-info h1 {
-    font-size: 25px;
+    font-size: 23px;
     padding-left: 3rem;
     font-weight: 300;
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+    font-style: normal;
 }
 
 hr {
     border: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(99, 99, 99, 0.2);
     width: 74%;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .quantity-control {
@@ -59,29 +181,29 @@ hr {
 
 #minus {
     font-size: 26px;
-    color: rgb(129, 129, 129);
+    color: rgb(106, 106, 106);
 }
 
 #plus {
     font-size: 20px;
-    color: rgb(129, 129, 129);
+    color: rgb(106, 106, 106);
 }
 
 #minus:hover, #plus:hover{
-    color: rgb(231, 100, 98);
+    color: rgb(239, 168, 166);
 
 }
 
 
 .quantity-control span {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 13px;
+    border: 1.5px solid rgb(0, 0, 0, 0.3);
     color: rgb(119, 119, 119);
     padding: 4px 10px;
     font-size: 14px;
     display: inline-block;
-    width: 23%;
+    width: 20%;
     text-align: center;
+    border-radius: 13px;
 }
 
 .product-card {
@@ -93,12 +215,11 @@ hr {
     padding: 20px;
     margin: 0 0 10px 90px ;
     border-radius: 10px;
-    
 }
 
 .product-image-container {
-    background-color: rgb(241, 241, 241);
-    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 8px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +253,7 @@ hr {
     justify-content: center;
     font-size: 17px;
     font-weight: 100;
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
 }
 
 .empty-cart-width {
@@ -150,7 +271,7 @@ hr {
     font-weight: 500;
 }
 
-a {
+.continue-shopping-link {
     text-decoration: none;
     background-color: transparent;
     padding: 12px 10px 12px 10px;
@@ -166,10 +287,10 @@ a {
     grid-template-columns: 1fr 1fr;
     text-align:center;
     padding-right:2rem;
-    gap: 7rem;
+    gap: 6rem;
 }
 
-.shipping-promo p:not(.heyo,.promo-code-info){
+.shipping-promo p:not(.heyo,.promo-code-info,.total-cost){
     padding: 1rem 0 1rem 3.5rem;
     text-transform: uppercase;
     font-size: 12px;
@@ -180,13 +301,13 @@ a {
     display: block;
     margin: 0 auto;
     width: 73%;
-    padding: 14px;
+    padding: 15px;
     border: none;
     color: white;
-    background-color: rgb(24, 36, 111);
+    background-color: #001F3F;
     text-transform: uppercase;
     font-size: 10px;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 select {
@@ -205,7 +326,7 @@ option {
     color: red;
 }
 
-input[type="text"] {
+.promo-code input[type="text"] {
     display: block;
     border: none;
     margin: 0 auto;
@@ -218,11 +339,12 @@ input[type="text"] {
 #apply {
     border: none;
     color: white;
-    background-color:rgb(250, 127, 127);
+    background-color:rgb(237, 159, 156);
     padding:10px;
     width: 15%;
     margin: 1.5rem 0 1.5rem 3.4rem;
     font-size: 9px;
+    border-radius: 5px; 
 }
 
 .check-mark {
@@ -231,8 +353,11 @@ input[type="text"] {
     grid-template-columns: auto auto auto;
     place-items:center;
     justify-content: start;
-    margin-left: 55px;
-    gap: 15px;
+    margin-left: 50px;
+}
+
+.check-mark img {
+    padding-right: 8px;
 }
 
 .check-mark button {
@@ -240,7 +365,7 @@ input[type="text"] {
     border: none;
     background-color: transparent;
     font-size: 11px;
-    padding-left: 130px;
+    padding-left: 125px;
 }
 
 .check-mark button:hover {
@@ -250,14 +375,14 @@ input[type="text"] {
 .promo-code-info {
     font-size: 10px;
     padding: 0;
-    margin:-30px 0 0 26px;
+    margin:-30px 0 0 16px;
     color: rgb(88, 87, 87);
 
 }
-input {
+.promo-code input {
     text-transform: uppercase;
 }
 
-input::placeholder {
+.promo-code input::placeholder {
     text-transform: capitalize;
 }

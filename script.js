@@ -1,7 +1,4 @@
-
-
 fetchData();
-
 
 async function fetchData() {
     try {
@@ -41,7 +38,7 @@ function addToCart() {
             paragraphCart.style.display = 'none';
             }, 3000);
 
-            const productName = button.dataset.productName; 
+            const productTitle = button.dataset.productTitle; 
             const productImage = button.dataset.productImage;
             const productPrice = button.dataset.productPrice;
             const productId = button.dataset.productId;
@@ -54,7 +51,7 @@ function addToCart() {
                 } else {
                     cart.push({
                     productId,
-                    productName, 
+                    productTitle, 
                     productImage,
                     productPrice,
                     quantity: 1,
@@ -74,7 +71,7 @@ function displayProducts(products) {
             <div class = "product-image-container">
                 <img src="assets/product-images/product${product.id}.png" alt="${product.title}"/>
             </div>
-            <button class="wishlist-button-small" data-product-title = "${product.title}" data-product-image = "${product.image}" data-product-id = "${product.id}">
+            <button class="wishlist-button-small" data-product-price = "${product.price}" data-product-title = "${product.title}" data-product-image = "${product.image}" data-product-id = "${product.id}">
                 <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/4D4D4D/like--v2.png" alt="like--v2"/>
             </button>
             <div class="product-info"> 
@@ -85,7 +82,7 @@ function displayProducts(products) {
                 </div>
             </div>
             <div class = "add-to-cart-container">
-                <button class="add-to-cart-btn" data-product-name = "${product.title}" data-product-price = "${product.price}" data-product-image = "${product.image}" data-product-id = "${product.id}">Add to Cart</button>
+                <button class="add-to-cart-btn" data-product-title = "${product.title}" data-product-price = "${product.price}" data-product-image = "${product.image}" data-product-id = "${product.id}">Add to Cart</button>
                 <p class="added-to-cart"><span style="color:green;">&#10003;</span> Added to Cart</p>
             </div>
         </div>
@@ -98,7 +95,7 @@ function displayProducts(products) {
         const isFavorite = favorites.find(item => item.productId === productId);
     
         if (isFavorite) {
-            button.querySelector('img').src = 'https://img.icons8.com/material/24/4D4D4D/like--v1.png';
+            button.querySelector('img').src = 'https://img.icons8.com/material/24/EFA8A6/like--v1.png';
         }
     })
 
@@ -116,26 +113,24 @@ function displayProducts(products) {
         const products = JSON.parse(localStorage.getItem('products')) || [];
 
         allButtons.forEach((button) => {
-            button.style.backgroundColor = 'transparent';
-            button.style.color = 'black';
+            button.style.borderColor = 'rgb(208, 207, 207)';
         });
 
         let filteredarray = [];
         if (button.innerHTML === 'All') {
-            button.style.backgroundColor = 'rgb(24, 36, 111)';
-            button.style.color = 'white';
+            button.style.borderColor = '#001F3F';
             filteredarray = products;
         } else if( button.innerHTML ==='Clothing') {
-            button.style.backgroundColor = 'rgb(24, 36, 111)';
-            button.style.color = 'white';
+            button.style.borderColor = '#001F3F';
+            button.style.borderWidth = '1.4px';
             filteredarray = products.filter(product => product.category === "women's clothing" || product.category === "men's clothing");
         } else if(button.innerHTML === 'Jewelry') {
-            button.style.backgroundColor = 'rgb(24, 36, 111)';
-            button.style.color = 'white';
+            button.style.borderColor = '#001F3F';
+            button.style.borderWidth = '1.4px';
             filteredarray = products.filter(product => product.category === 'jewelery');
         } else if(button.innerHTML = 'Gadgets') {
-            button.style.backgroundColor = 'rgb(24, 36, 111)';
-            button.style.color = 'white';
+            button.style.borderColor = '#001F3F';
+            button.style.borderWidth = '1.4px';
             filteredarray = products.filter(product => product.category === 'electronics');
         }
         displayProducts(filteredarray);
@@ -143,6 +138,16 @@ function displayProducts(products) {
     });
 });
 
+function shopNow() {
+    allButtons.forEach((button) => {
+        button.style.borderColor = 'rgb(208, 207, 207)';
+    });
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    const button = document.querySelector('#Gadgets');
+    button.style.borderColor = '#001F3F';
+    filteredarray = products.filter(product => product.category === 'electronics');
+    displayProducts(filteredarray);
+}
 const inputElement = document.querySelector('.input');
 
 function searchDisplay() {
@@ -158,7 +163,7 @@ function searchDisplay() {
     if (filteredarray.length != 0) {
         displayProducts(filteredarray);
     } else {
-        productgrid.innerHTML = `<p class="no-products-found">No Items Found</p>`;
+        productgrid.innerHTML = `<p class="no-products-found">No items found.</p>`;
     }
 }
 
@@ -188,6 +193,8 @@ function addToFavorites() {
             const productId = button.dataset.productId;
             const productTitle = button.dataset.productTitle; 
             const productImage = button.dataset.productImage;
+            const productPrice = button.dataset.productPrice;
+            
             
             let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -197,8 +204,8 @@ function addToFavorites() {
                 favorites.splice(index,1);
                 button.querySelector('img').src = 'https://img.icons8.com/material-outlined/24/4D4D4D/like--v2.png';
             } else {
-                favorites.push({ productId, productTitle, productImage });
-                button.querySelector('img').src = 'https://img.icons8.com/material/24/4D4D4D/like--v1.png';
+                favorites.push({ productId, productTitle, productImage, productPrice });
+                button.querySelector('img').src = 'https://img.icons8.com/material-sharp/24/EFA8A6/like--v1.png';
             }
                 localStorage.setItem('favorites',JSON.stringify(favorites));
             })   

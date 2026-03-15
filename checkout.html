@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Cart - Shoply</title>
+    <title>Cart - Shoppr</title>
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.typekit.net/hgc5hqd.css">
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
+    <div class = "header"> 
+        <a class = "header-link" href="index.html">
+            <div class = "logo"> 
+                <img src="logo-pic.png" width="130" height="45">
+            </div>
+        </a>
+        <div class = "right-section">
+            <div class = "search-bar"> 
+                <input class ="input" type="text" placeholder="Search for products" size = "50">
+            </div>
+            <button class = "search-icon" onclick="searchDisplay()"> 
+                <img src="assets/search-icon.png" alt="Search" width="27" height="27">
+            </button>
+            <button class = "cart-button" onclick = "window.location.href= 'checkout.html'">
+                <div class = "cart-icon"> 
+                    <img src="assets/cart-icon.png" alt="Cart" width="30" height="28">
+                    <div class ="cart-icon-bubble"></div>
+                </div>
+            </button>
+            <button class="wish-list-button" onclick ="window.location.href = 'wishlist.html'">
+                <img width="27" height="27" src="https://img.icons8.com/fluency-systems-regular/48/4D4D4D/like--v1.png" alt="like"/>
+            </button>
+        </div>
+    </div>
     <div class = "checkout-layout">
         <div class = left-section> 
             <div class = "cart-info"> </div>
