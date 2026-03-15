@@ -27,8 +27,8 @@ app.post('/create-checkout-session', async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             line_items: lineItems,
             mode: 'payment',
-            success_url: 'https://your-railway-url.railway.app/success.html',
-            cancel_url: 'https://your-railway-url.railway.app/checkout.html',
+            success_url: 'https://shoppr-ecommerce.onrender.com/success.html',
+            cancel_url: 'https://shoppr-ecommerce.onrender.com/checkout.html',
         });
 
         res.json({url: session.url});
