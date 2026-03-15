@@ -287,7 +287,7 @@ input {
 @media (max-width: 480px) {
     .logo {
         font-size: 23px;
-        margin: 7px 0 0 20px;
+        margin: 20px 0 0 20px;
         text-transform: uppercase;
     }
 
@@ -414,6 +414,37 @@ input {
 
     .main-content-image img {  
         height: 95px;
+    }
+
+}
+
+@media (max-width: 660px) {
+    .input {
+        font-size: 13px;
+        width: 12rem;
+        margin-left:15px;
+    }
+
+    .search-icon {
+        transform: translateX(118%);
+    }
+}
+
+@media (max-width: 460px) {
+    .logo img {
+        width: 120%;  
+        height: 75%;
+        margin-top: 6px;
+
+    }
+    .input {
+        font-size: 10px;
+        width:10rem;
+        margin-left:15px;
+    }
+
+    .search-icon {
+        transform: translateX(70%);
     }
 
 }
